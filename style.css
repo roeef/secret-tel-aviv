@@ -72,14 +72,20 @@ h3 {
 }
 
 .column {
-  display: inline-block;
+  float:left;
   width: 33.33%;
-  vertical-align: top;
   box-sizing: border-box;
   padding: 20px;
 }
 
 .food img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.night-life img {
+  display: block;
   object-fit: cover;
   width: 100%;
 }
@@ -88,3 +94,42 @@ section {
   background-color: #ddd;
 }
 
+
+
+
+.column-70 {
+  width: 66.666%;
+  float: left;
+}
+
+.column-30 {
+  width: 33.333%;
+  float: left;
+}
+
+.row:before {
+  display: table;
+  content: "";
+}
+
+.row:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.card {
+  margin:0 0px 20px;
+  background-color: white;
+}
+
+.padding-text {
+  padding: 0 20px 10px;
+}
+
+
+@media (max-width: 700px) {
+  .column {
+    width: 100%;
+  }
+}
